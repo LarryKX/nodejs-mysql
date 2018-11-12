@@ -1,0 +1,52 @@
+paths:
+  /run_sql:
+    get:
+      tags:
+      - "Run SQL"
+      summary: "Get data"
+      operationId: "runSQL"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "Definitions.yaml#/definitions/SuccessResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "Definitions.yaml#/definitions/ErrorResponse"
+      x-swagger-router-controller: RunSQLController
+    put:
+      tags:
+      - "Execute SQL"
+      summary: "Get data"
+      operationId: "execute"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "Definitions.yaml#/definitions/SuccessResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "Definitions.yaml#/definitions/ErrorResponse"
+      x-swagger-router-controller: RunSQLController
+
+  /run_sql/{id}:
+    get:
+      tags:
+      - "Run SQL"
+      summary: "Get data"
+      operationId: "runSQL"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "Definitions.yaml#/definitions/SuccessResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "Definitions.yaml#/definitions/ErrorResponse"
+      x-swagger-router-controller: RunSQLController

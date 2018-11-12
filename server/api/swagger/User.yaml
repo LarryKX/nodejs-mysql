@@ -1,0 +1,56 @@
+paths:
+  /auth:
+    post:
+      tags:
+      - "User Auth"
+      summary: "authentication"
+      operationId: "getAuth"
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              userid:
+                type: string
+              password:
+                type: string
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "Definitions.yaml#/definitions/SuccessResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "Definitions.yaml#/definitions/ErrorResponse"
+      x-swagger-router-controller: UserController
+
+  /add:
+    post:
+      tags:
+      - "User Auth"
+      summary: "authentication"
+      operationId: "register"
+      parameters:
+      - name: body
+        in: body
+        required: true
+        schema:
+          type: object
+          properties:
+            userid:
+              type: string
+            password:
+              type: string
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "Definitions.yaml#/definitions/SuccessResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "Definitions.yaml#/definitions/ErrorResponse"
+      x-swagger-router-controller: UserController

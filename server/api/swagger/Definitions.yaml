@@ -1,0 +1,19 @@
+definitions:
+  SuccessResponse:
+    required:
+    - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+    - message
+    properties:
+      message:
+        type: string
+  ForbiddenResponse:
+    required:
+    - message
+    properties:
+      message:
+        type: string

@@ -1,0 +1,18 @@
+paths:
+  /monitor:
+    get:
+      tags:
+      - "Monitor"
+      summary: "Get data"
+      operationId: "getData"
+      parameters: []
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "Definitions.yaml#/definitions/SuccessResponse"
+        default:
+          description: "Error"
+          schema:
+            $ref: "Definitions.yaml#/definitions/ErrorResponse"
+      x-swagger-router-controller: MonitorController

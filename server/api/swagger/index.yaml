@@ -1,0 +1,26 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Monitor APIs
+basePath: /
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+
+  /v1/monitor:
+    $ref: ./Monitor.yaml#/paths/~1monitor
+
+
+
+  /v1/run_sql:
+    $ref: ./SQLEditor.yaml#/paths/~1run_sql
+
+
+
+  /v1/user/auth:
+    $ref: ./User.yaml#/paths/~1auth
+
+  /v1/user:
+    $ref: ./User.yaml#/paths/~1add

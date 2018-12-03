@@ -33,7 +33,7 @@ exports.start = (app, port) => {
             // TODO: Access control origin should not be enabled for '*'
             // give a list of sources for which this should be enabled
             appRouter.use((req, res, next) => {
-                let isAuthUrl = false;
+                let isAuthUrl = true;
                 AuthUrl.forEach( url => {if(url === req.originalUrl){console.log("url match");isAuthUrl = true;}});
                 if(!isAuthUrl){
                     try {
